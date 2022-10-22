@@ -1,0 +1,29 @@
+<div class="container">
+  <table id="BookList" width="80%" class="table table-trapped">
+    <thead>
+      <tr>
+        <th width="5%">Image</th>
+        <th width="15%">Name</th>
+        <th width="50%">Description</th>
+        <th width="10%">Price</th>
+        <th width="3%">Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="books$ | async as books">
+      <tr *ngFor="let book of books">
+        <td> <a [routerLink]="['/bookstore',book.id]">
+          <img [src]='book.image' [style.width.px]='50' ></a>
+
+        </td>
+        <td>{{book.name}}</td>
+        <td>{{book.description}}</td>
+        <td>{{book.price | currency: 'INR'}}</td>
+
+        <td>
+          <button class="delete-button" style='margin-right:16px' (click)="deleteBook(book)">Del</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

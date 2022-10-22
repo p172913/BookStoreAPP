@@ -1,0 +1,36 @@
+<div class="container" style="margin: 20px;">
+
+  <h1>EditBook</h1>
+  <div>
+    <form #editBookForm="ngForm" (ngSubmit)="editBookData()">
+      <div class="form-group">
+        <label for="name">Book Name</label>
+        <input type="text" #name class="form-control" id="name" required [(ngModel)]="book.name" name="name">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="name">Book Image</label>
+        <input type="text" #image class="form-control" id="image" required [(ngModel)]="book.image" name="image">
+      </div>
+      <br>
+
+      <div class="form-group">
+        <label for="name">Price</label>
+        <input type="text" #price class="form-control" id="price" required [(ngModel)]="book.price" name="price">
+      </div>
+      <br>
+
+      <div class="form-group">
+        <label for="name">Description</label>
+        <input type="text" #description class="form-control" id="description" required [(ngModel)]="book.description" name="description">
+      </div>
+      <br>
+      <div class="form-group">
+        <input type="submit" name="save" value="save">
+      </div>
+
+    </form>
+    <button (onClick)="clear()">clear</button>
+
+  </div>
+</div>

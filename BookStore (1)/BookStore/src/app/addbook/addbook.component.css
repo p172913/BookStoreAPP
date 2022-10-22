@@ -1,0 +1,8 @@
+label {
+  display: inline-flex;
+  width:100px;
+  text-align: right;
+}
+.required-hint {
+  color: #f00;
+}

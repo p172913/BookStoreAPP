@@ -1,0 +1,39 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="BookStore" >
+<div style="text-align:center">
+  <h1>
+    Kanishk Book Store
+  </h1>
+ </div>
+ <div  *ngIf="isCust | async">
+ <div class="store">
+  <a>
+    <span routerLink="bookstore">Online Bookstore</span>
+  </a>
+  <a>
+      <span>About us</span>
+    </a>
+    <a>
+        <span>Contact us</span>
+      </a>
+      <a>
+          <span (click)="logout()">Logout</span>
+        </a>
+        <a>
+          <span>Admin</span>
+        </a>
+        <a>
+          <span><input type="search" (ngModelChange) = search2($event) class="search" [(ngModel)]="book" placeholder="Search Books"> </span>
+        </a>
+        <a>
+          <button class="search-button" (click)="search()">Search</button>
+        </a>
+
+</div>
+  <div>
+    <button class="add-button" [routerLink]= "['addbook']" >Add Item</button>
+  </div>
+  </div>
+  </div>
+  <router-outlet></router-outlet>
+

@@ -1,0 +1,36 @@
+table,td,th
+{
+
+  border-collapse: collapse;
+  border: 1px solid grey;
+  margin: 20px;
+  padding: 10px;
+}
+
+th{
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-family: sans-serif;
+  font-size: small;
+
+}
+
+td{
+
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-family: sans-serif;
+  font-size: small;
+  padding: 5px;
+}
+
+.delete-button{
+
+  background-color: #d93749;
+  color: white;
+  border-radius: 5px;
+  border: white;
+  padding: 10px;
+
+}
+

@@ -1,0 +1,41 @@
+<div class="container" style="margin: 20px;">
+
+  <h1>Add Book</h1>
+  <div>
+    <form #addBookForm="ngForm" (ngSubmit)="addBookForm.form.valid && addBookData(addBookForm)">
+      <div class="form-group">
+          <span class="required-hint" *ngIf="addBookForm.submitted && name.errors?.required">*</span>
+        <label for="name">Book Name</label>
+        <input type="text"  class="form-control" id="name" required [(ngModel)]="book.name" name="name" #name="ngModel">
+      </div>
+      <br>
+      <div class="form-group">
+          <span class="required-hint" *ngIf="addBookForm.submitted && image.errors?.required">*</span>
+
+        <label for="name">Book Image</label>
+        <input type="text"  class="form-control" id="image" required [(ngModel)]="book.image" name="image" #image="ngModel">
+      </div>
+      <br>
+
+      <div class="form-group">
+          <span class="required-hint" *ngIf="addBookForm.submitted && price.errors?.required">*</span>
+
+        <label for="name">Price</label>
+        <input type="text"  class="form-control" id="price" required [(ngModel)]="book.price" name="price" #price="ngModel">
+      </div>
+      <br>
+
+      <div class="form-group">
+        <label for="name">Description</label>
+        <input type="text" #description="ngModel" class="form-control" id="description" required [(ngModel)]="book.description" name="description">
+      </div>
+      <br>
+      <div class="form-group">
+        <input type="submit" name="save" value="save">
+      </div>
+
+    </form>
+    <button (onClick)="clear()">clear</button>
+
+  </div>
+</div>
